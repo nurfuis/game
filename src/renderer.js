@@ -1,4 +1,4 @@
 import "./index.css";
-import { MenuRenderer } from "./menu/menuRenderer";
+import { GameMenuRenderer } from "./GameMenu/GameMenuRenderer";
 
-const newMainMenu = new MenuRenderer();
+const newGameMenu = new GameMenuRenderer();

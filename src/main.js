@@ -1,5 +1,5 @@
 const { app, BrowserWindow } = require("electron");
-const { MenuMain } = require("./menu/menuMain");
+const { GameMenuMain } = require("./GameMenu/GameMenuMain");
 
 if (require("electron-squirrel-startup")) {
   app.quit();
@@ -19,7 +19,8 @@ const createWindow = () => {
   mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY);
   mainWindow.webContents.openDevTools();
 
-  const newMainMenu = new MenuMain();
+  // start of my code
+  const newGameMenu = new GameMenuMain();
 
 };
 

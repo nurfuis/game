@@ -1,11 +1,10 @@
 import {
-  START_BUTTON_CLASS,
-  START_BUTTON_TEXT,
-  START_BUTTON_WRAPPER_CLASS,
-} from "../menuConstants";
+  LAUNCH_BUTTON_CLASS,
+  LAUNCH_BUTTON_TEXT,
+  LAUNCH_BUTTON_WRAPPER_CLASS,
+} from "../GameMenuConstants";
 
-
-export class StartButton {
+export class LaunchButton {
   constructor(element) {
     this.ready(element);
   }
@@ -16,19 +15,19 @@ export class StartButton {
 
 function addTo(element) {
   const newButton = document.createElement("button");
-  newButton.classList.add(START_BUTTON_CLASS);
-  newButton.innerText = START_BUTTON_TEXT;
+  newButton.classList.add(LAUNCH_BUTTON_CLASS);
+  newButton.innerText = LAUNCH_BUTTON_TEXT;
 
   const newButtonWrapper = document.createElement("div");
-  newButtonWrapper.classList.add(START_BUTTON_WRAPPER_CLASS);
+  newButtonWrapper.classList.add(LAUNCH_BUTTON_WRAPPER_CLASS);
   newButtonWrapper.appendChild(newButton);
 
   element.appendChild(newButtonWrapper);
 
   newButton.addEventListener("click", () => {
-    const response = window.menuAPI.openMenu();
+    const response = window.GameMenuAPI.openGameMenu();
 
-    console.log("Start button was handled:", response);
+    console.log("Launch button was handled:", response);
 
     if (!!response) {
       newButtonWrapper.remove();

@@ -1,9 +1,9 @@
-.main-menu__button-wrapper {
+.game-menu__launch-button-wrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
 }
-.main-menu__start-button {
+.game-menu__launch-button {
   font-size: large;
 }
