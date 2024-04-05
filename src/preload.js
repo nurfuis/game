@@ -1,6 +1,6 @@
 const { contextBridge } = require("electron");
 const { menuAPI } = require("./menu/menuAPI");
 
-const mainMenu = menuAPI;
+const newMenuAPI = menuAPI;
 
-contextBridge.exposeInMainWorld("menuAPI", mainMenu);
+contextBridge.exposeInMainWorld("menuAPI", newMenuAPI);

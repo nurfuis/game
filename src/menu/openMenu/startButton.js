@@ -2,7 +2,7 @@ import {
   START_BUTTON_CLASS,
   START_BUTTON_TEXT,
   START_BUTTON_WRAPPER_CLASS,
-} from "./menuConstants";
+} from "../menuConstants";
 
 export class StartButton {
   constructor(element) {
@@ -22,7 +22,7 @@ export class StartButton {
     newButton.addEventListener("click", () => {
       const response = window.menuAPI.openMenu();
 
-      console.log(response);
+      console.log("Start button was handled:", response);
 
       if (response) {
         remove();

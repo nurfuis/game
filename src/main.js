@@ -1,6 +1,6 @@
 const { app, BrowserWindow } = require("electron");
 const path = require("node:path");
-const { openMenu } = require("./menu/openMenu");
+const { handleOpenMenu } = require("./menu/openMenu/handleOpenMenu");
 
 if (require("electron-squirrel-startup")) {
   app.quit();
@@ -17,7 +17,7 @@ const createWindow = () => {
   });
 
   mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY);
-  const startButton = openMenu();
+  const startButton = handleOpenMenu();
   console.log("Start button loaded:", startButton);
   mainWindow.webContents.openDevTools();
 };
