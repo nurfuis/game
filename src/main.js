@@ -1,10 +1,10 @@
 const { app, BrowserWindow } = require("electron");
-const path = require("node:path");
-const { handleOpenMenu } = require("./menu/openMenu/handleOpenMenu");
+const { MenuMain } = require("./menu/menuMain");
 
 if (require("electron-squirrel-startup")) {
   app.quit();
 }
+
 process.env["ELECTRON_DISABLE_SECURITY_WARNINGS"] = true;
 
 const createWindow = () => {
@@ -17,9 +17,10 @@ const createWindow = () => {
   });
 
   mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY);
-  const startButton = handleOpenMenu();
-  console.log("Start button loaded:", startButton);
   mainWindow.webContents.openDevTools();
+
+  const newMainMenu = new MenuMain();
+
 };
 
 app.whenReady().then(() => {

@@ -1,6 +1,4 @@
 import "./index.css";
-import { StartButton } from "./menu/openMenu/startButton";
+import { MenuRenderer } from "./menu/menuRenderer";
 
-const body = document.querySelectorAll(".body");
-const startButton = new StartButton(body[0]);
-console.log("Start button loaded:", startButton);
+const newMainMenu = new MenuRenderer();

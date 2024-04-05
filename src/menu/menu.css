@@ -1,0 +1,9 @@
+.main-menu__button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.main-menu__start-button {
+  font-size: large;
+}
