@@ -1,4 +1,8 @@
-import { START_BUTTON_TEXT } from "./menuCOnstants";
+import {
+  START_BUTTON_CLASS,
+  START_BUTTON_TEXT,
+  START_BUTTON_WRAPPER_CLASS,
+} from "./menuConstants";
 
 export class StartButton {
   constructor(element) {
@@ -6,11 +10,11 @@ export class StartButton {
   }
   ready(element) {
     const newButton = document.createElement("button");
-    newButton.classList.add("main-menu__start-button");
+    newButton.classList.add(START_BUTTON_CLASS);
     newButton.innerText = START_BUTTON_TEXT;
 
     const newButtonWrapper = document.createElement("div");
-    newButtonWrapper.classList.add("main-menu__button-wrapper");
+    newButtonWrapper.classList.add(START_BUTTON_WRAPPER_CLASS);
     newButtonWrapper.appendChild(newButton);
 
     element.appendChild(newButtonWrapper);
@@ -19,6 +23,16 @@ export class StartButton {
       const response = window.menuAPI.openMenu();
 
       console.log(response);
+
+      if (response) {
+        remove();
+      }
     });
   }
+}
+function remove() {
+  const elementToRemove = document.querySelectorAll(
+    `.${START_BUTTON_WRAPPER_CLASS}`
+  );
+  elementToRemove[0].remove();
 }
