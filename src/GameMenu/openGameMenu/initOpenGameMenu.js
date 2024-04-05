@@ -2,7 +2,7 @@ import { ipcMain } from "electron";
 import { openGameMenu } from "./openGameMenu";
 
 export function initOpenGameMenu() {
-  ipcMain.on("openGameMenu:startButton", async (event) => {
+  ipcMain.on("openGameMenu:launch-button", async (event) => {
     openGameMenu();
 
     event.returnValue = true;

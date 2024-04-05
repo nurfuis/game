@@ -7,12 +7,11 @@ export class GameMenuRenderer {
   }
   ready() {
     addLaunchButton();
-    // play intro
   }
 }
 
 function addLaunchButton() {
   const bodyElement = document.querySelectorAll(".body");
   const launchBlock = new LaunchButton(bodyElement[0]);
-  console.log("Succesfully created: ", launchBlock);
+  console.log("Successfully created: ", launchBlock);
 }
