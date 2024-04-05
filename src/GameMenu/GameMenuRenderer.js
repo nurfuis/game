@@ -1,5 +1,5 @@
-import "./GameMenu.css";
-import { LaunchButton } from "./openGameMenu/LaunchButton";
+import "./gameMenu.css";
+import { LaunchButton } from "./gameMenuRenderer/LaunchButton";
 
 export class GameMenuRenderer {
   constructor() {

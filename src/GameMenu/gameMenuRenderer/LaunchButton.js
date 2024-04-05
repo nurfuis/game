@@ -25,8 +25,8 @@ function addTo(element) {
   element.appendChild(newButtonWrapper);
 
   newButton.addEventListener("click", () => {
+    // instead of openGameMenu, try to run a launch sequence
     const response = window.GameMenuAPI.openGameMenu();
-
     console.log("Launch button was handled:", response);
 
     if (!!response) {

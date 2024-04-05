@@ -1,4 +1,4 @@
-import { initOpenGameMenu as initOpenGameMenu } from "./openGameMenu/initOpenGameMenu";
+import { initOpenGameMenu as initOpenGameMenu } from "./gameMenuMain/open/initOpenGameMenu";
 
 export class GameMenuMain {
   constructor() {

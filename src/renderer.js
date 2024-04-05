@@ -1,6 +1,4 @@
 import "./index.css";
-import { GameMenuRenderer } from "./GameMenu/GameMenuRenderer";
+import { GameMenuRenderer } from "./gameMenu/GameMenuRenderer";
 
 const newGameMenu = new GameMenuRenderer();
-
-// play intro

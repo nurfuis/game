@@ -1,6 +1,7 @@
-export function enableGameMenuOptions() {
+export function toggleGameMenuOptions() {
   console.log("[main] Enable the the menu api.");
-  // enable the menu api here
+  // check configuration
+  
 
   // then disable the menu once it is closed
 }
