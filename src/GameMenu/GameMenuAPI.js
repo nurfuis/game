@@ -2,7 +2,7 @@ const { ipcRenderer } = require("electron");
 
 export const GameMenuAPI = {
   openGameMenu() {
-    const response = ipcRenderer.sendSync("openGameMenu:launch-button");
+    const response = ipcRenderer.sendSync("game-menu:open");
     return response;
   },
 };

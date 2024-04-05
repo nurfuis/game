@@ -1,12 +1,10 @@
 import { ipcMain } from "electron";
-import { openGameMenu } from "./openGameMenu";
+import { enableGameMenuOptions } from "./enableGameMenuOptions";
 
 export function initOpenGameMenu() {
-  ipcMain.on("openGameMenu:launch-button", async (event) => {
-    // event recieved from the renderer
+  ipcMain.on("game-menu:open", async (event) => {
 
-    // enable the menu api
-    openGameMenu();
+    enableGameMenuOptions();
 
     // alert the renderer to display the menu, the api is listening
     event.returnValue = true;

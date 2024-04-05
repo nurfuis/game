@@ -1,4 +1,4 @@
-export function openGameMenu() {
+export function enableGameMenuOptions() {
   console.log("[main] Enable the the menu api.");
   // enable the menu api here
 
