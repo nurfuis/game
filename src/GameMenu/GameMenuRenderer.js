@@ -7,6 +7,12 @@ export class GameMenuRenderer {
   }
   ready() {
     addLaunchButton();
+    
+    document.addEventListener("keydown", (e) => {
+      if (e.code == "Escape") {
+        const response = window.GameMenuAPI.openGameMenu();
+      }
+    });
   }
 }
 

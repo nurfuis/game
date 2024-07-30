@@ -11,6 +11,7 @@ const createWindow = () => {
   const mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
+    fullscreen: true,
     webPreferences: {
       preload: MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY,
     },
@@ -20,8 +21,7 @@ const createWindow = () => {
   mainWindow.webContents.openDevTools();
 
   // start of my code
-  const newGameMenu = new GameMenuMain();
-
+  const newGameMenu = new GameMenuMain(mainWindow);
 };
 
 app.whenReady().then(() => {

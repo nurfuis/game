@@ -1,12 +1,10 @@
 import { ipcMain } from "electron";
 import { launchSequence } from "./launchSequence";
-export function initLaunchSequence() {
+export function initLaunchSequence(mainWindow) {
   ipcMain.on("game-menu:launch", async (event) => {
-    launchSequence();
+    launchSequence(mainWindow);
     event.returnValue = { options: "" };
     console.log("[main] Tell the renderer to launch.");
   });
-  //  return true to the module that the listener was loaded
   return true;
 }
-
